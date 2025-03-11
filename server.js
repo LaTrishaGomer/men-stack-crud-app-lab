@@ -8,9 +8,14 @@ const app = express();
 
 // GET 
 app.get('/', async (req, res) => {
-    res.send('index.ejs');
+    res.render('index.ejs');
   });
   
+
+app.get('/trips/new', (req, res) => {
+    res.render('trips/new.ejs');
+});
+
 
 mongoose.connect(process.env.MONGODB_URI);
 

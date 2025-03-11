@@ -1,0 +1,28 @@
+<!-- views/fruits/new.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Add a New Trip</title>
+  </head>
+  <body>
+    <h1>Add a New Trip!</h1>
+    <form action="/trips" method="POST">
+        <label for="name">Where to?</label>
+        <input type="text" name="name" id="name"  placeholder="ex. Thailand, Monterey">
+
+        <label for="name"><i class='bx bx-calendar'></i></label>
+        <input type="text" name="name" id="name"  placeholder="Start Date">
+
+        <label for="name"><i class='bx bx-calendar'></i></label>
+        <input type="text" name="name" id="name"  placeholder="End Date">
+
+        <button>Add Trip</button>
+
+        <label for=""></label>
+    </form>
+  </body>
+</html>
