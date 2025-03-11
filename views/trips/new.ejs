@@ -20,19 +20,21 @@
         </div>
       </nav>
 
-    <h1>Add a New Trip!</h1>
+    <div class="main">
+    <h2>Add a New Trip!</h2>
     <form action="/trips" method="POST">
         <label for="destination">Where to?</label>
         <input type="text" name="destination" id="destination"  placeholder="ex. Thailand, Monterey">
 
-        <label for="name"><i class='bx bx-calendar'></i> Start Date</label>
+        <label for="name"><i class='bx bx-calendar'></i> Depart</label>
         <input type="date" name="startDate" id="startDate">
 
-        <label for="name"><i class='bx bx-calendar'></i> End Date</label>
+        <label for="name"><i class='bx bx-calendar'></i> Return</label>
         <input type="date" name="endDate" id="endDate">
 
         <button type="submit">Add Trip</button>
     </form>
+</div>
 <ul>
     <li>
         <a href="/trips/">Back to All Trips</a>

@@ -25,8 +25,8 @@
             <a href='/trips'>Back to All Trips</a>
         </li>
     </ul>
-    <h3>Trip Start Date: <%= trip.startDate.toLocaleDateString() %></h3> 
-    <h3>Trip End Date: <%= trip.endDate.toLocaleDateString() %></h3> 
+    <h3>Depart Date: <%= trip.startDate.toLocaleDateString() %></h3> 
+    <h3>Return Date: <%= trip.endDate.toLocaleDateString() %></h3> 
     <form action='/trips/<%=trip._id%>?_method=DELETE' method='POST'>
         <button type="submit">Delete <%= trip.destination %></button>
     </form>
