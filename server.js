@@ -12,6 +12,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method')); 
 app.use(morgan('dev')); 
 
+app.use(express.static('public'));
+
 // GET 
 app.get('/', async (req, res) => {
     res.render('index.ejs');
