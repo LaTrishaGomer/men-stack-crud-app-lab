@@ -45,12 +45,17 @@ app.delete('/trips/:tripId', async (req, res) => {
   });
 
 
-app.get("/trips/:tripId/edit", async (req, res) => {
+app.get('/trips/:tripId/edit', async (req, res) => {
     const foundTrip = await Trip.findById(req.params.tripId);
     res.render('trips/edit.ejs', {
         trip: foundTrip,
     });
   });
+
+app.put('/trips/:tripId', async (req, res) => {
+    await Trip.findByIdAndUpdate(req.params.tripId, req.body);
+    res.redirect(`/trips/${req.params.tripId}`);
+});
   
   
 

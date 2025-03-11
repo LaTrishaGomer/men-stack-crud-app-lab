@@ -10,11 +10,11 @@
     <nav>
         <ul>
             <li>
-                <a href="/trips/">Back to Trips</a>
+                <a href='/trips/'>Back to Trips</a>
             </li>
         </ul>
     </nav>
-    <form action="/trips <%= trip._id %>"?_method=PUT method="POST">
+    <form action="/trips/<%= trip._id %>?_method=PUT" method="POST">
         <label for="destination">Where to?</label>
         <input type="text" name="destination" id="destination"  placeholder="ex. Thailand, Monterey">
 
