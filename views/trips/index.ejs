@@ -9,8 +9,11 @@
     <h1>All Trips</h1>
     <ul>
       <% trips.forEach(trip => { %>
-        <li><%= trip.destination %></li>
+        <li>
+          <a href="/trips/<%= trip._id %>"> <%= trip.destination %> </a>
+        </li>
       <% }); %>
     </ul>
   </body>
 </html>
+

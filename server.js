@@ -2,12 +2,15 @@ const dotenv = require('dotenv');
 dotenv.config();
 const express = require('express');
 const mongoose = require('mongoose');
+const methodOverride = require('method-override'); 
+const morgan = require('morgan'); 
 
 const app = express();
 
 
 app.use(express.urlencoded({ extended: false }));
-
+app.use(methodOverride('_method')); 
+app.use(morgan('dev')); 
 
 // GET 
 app.get('/', async (req, res) => {
@@ -24,12 +27,23 @@ app.get('/trips/new', (req, res) => {
     res.render('trips/new.ejs');
 });
 
+app.get('/trips/:tripId', async (req, res) => {
+    const foundTrip = await Trip.findById(req.params.tripId);
+    res.render('trips/show.ejs', { trip: foundTrip });
+});
+
+
 app.post('/trips', async (req, res) => {
     console.log(req.body);
     await Trip.create(req.body);
     res.redirect('/trips');
 });
 
+app.delete('/trips/:tripId', async (req, res) => {
+    await Trip.findByIdAndDelete(req.params.tripId);
+    res.redirect('/trips');
+  });
+  
 
 mongoose.connect(process.env.MONGODB_URI);
 
