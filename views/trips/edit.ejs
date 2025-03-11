@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Trip</title>
+</head>
+<body>
+    <h1>Edit <%= trip.destination %></h1>
+    <nav>
+        <ul>
+            <li>
+                <a href="/trips/">Back to Trips</a>
+            </li>
+        </ul>
+    </nav>
+    <form action="/trips <%= trip._id %>"?_method=PUT method="POST">
+        <label for="destination">Where to?</label>
+        <input type="text" name="destination" id="destination"  placeholder="ex. Thailand, Monterey">
+
+        <label for="name"><i class='bx bx-calendar'></i> Start Date</label>
+        <input type="date" name="startDate" id="startDate">
+
+        <label for="name"><i class='bx bx-calendar'></i> End Date</label>
+        <input type="date" name="endDate" id="endDate">
+        <button type="submit">Update Trip</button>
+    </form>
+</body>
+
+</html>

@@ -43,6 +43,15 @@ app.delete('/trips/:tripId', async (req, res) => {
     await Trip.findByIdAndDelete(req.params.tripId);
     res.redirect('/trips');
   });
+
+
+app.get("/trips/:tripId/edit", async (req, res) => {
+    const foundTrip = await Trip.findById(req.params.tripId);
+    res.render('trips/edit.ejs', {
+        trip: foundTrip,
+    });
+  });
+  
   
 
 mongoose.connect(process.env.MONGODB_URI);

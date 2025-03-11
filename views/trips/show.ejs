@@ -17,6 +17,8 @@
     <form action='/trips/<%=trip._id%>?_method=DELETE' method='POST'>
         <button type="submit">Delete <%= trip.destination %></button>
     </form>
+    <a href="/trips/<%= trip._id %>/edit">Edit <%= trip.destination %></a>
+    <a href="/trips">Back to Trips</a>
   </body>
 </html>
 
