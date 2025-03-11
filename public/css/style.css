@@ -125,7 +125,7 @@ body {
   .main {
     background-color: #FFFFFF;
     width: 500px;
-    height: 400px;
+    height: 600px;
     margin: 7em auto;
     border-radius: 1.5em;
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
@@ -151,6 +151,19 @@ form button {
     width: 400px;
     height: 400px;
     margin: 7em auto;
+}
+
+label{
+	font-weight: bold;
+}
+
+input{
+	background: #e0dede;
+	margin: 20px auto;
+	padding: 12px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
 }
 
 
