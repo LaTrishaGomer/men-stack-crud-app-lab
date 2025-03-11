@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
 const tripSchema = new mongoose.Schema({
-    name: String, 
-    startDate: String,
-    endDate: String,
+    destination: String, 
+    startDate: Date,
+    endDate: Date,
 
 });
 
