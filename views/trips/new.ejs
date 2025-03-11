@@ -5,17 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Add a New Trip</title>
   </head>
   <body>
-    <h1>Add a New Trip!</h1>
     <nav>
-        <ul>
-            <li>
-                <a href="/trips/">Back to Trips</a>
-            </li>
-        </ul>
-    </nav>
+        <div id="destinations">
+          <p><i class='bx bxs-plane-take-off' ></i> Travel Planner Pro</p>
+        </div>
+        <div id="actions">
+          <a href="/">Plan a Trip</a>
+          <p>Sign in</p>
+          <button>Sign up</button>
+        </div>
+      </nav>
+
+    <h1>Add a New Trip!</h1>
     <form action="/trips" method="POST">
         <label for="destination">Where to?</label>
         <input type="text" name="destination" id="destination"  placeholder="ex. Thailand, Monterey">
@@ -28,5 +33,10 @@
 
         <button type="submit">Add Trip</button>
     </form>
+<ul>
+    <li>
+        <a href="/trips/">Back to All Trips</a>
+    </li>
+</ul>
   </body>
 </html>
