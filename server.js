@@ -18,6 +18,8 @@ mongoose.connection.on('connected', () => {
     console.log(`Connected to MongoDB ${mongoose.connection.name}.`);
 });
 
+const Trip = require('./models/trip.js');
+
 
 app.listen(3000, () => {
   console.log('Listening on port 3000');
