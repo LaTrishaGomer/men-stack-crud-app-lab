@@ -75,6 +75,7 @@ body {
     color: #ffffff;
     font-weight: 500;
     font-family: var(--font-family);
+    cursor: pointer;
   }
 
   #headers {
@@ -115,21 +116,41 @@ body {
     color: var(--white);
   }
 
+  ul {
+    list-style-type: none;
+}
+
 
   /* new.ejs */
   .main {
     background-color: #FFFFFF;
-    width: 400px;
+    width: 500px;
     height: 400px;
     margin: 7em auto;
     border-radius: 1.5em;
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
 }
 
+.main h2 {
+    padding: 45px;
+    padding-bottom: 0px;
+}
+
 form {
-    position: relative;
-    width: 50%;
-    align-items: center;
+    width: 60%;
+    margin: 55px;
+    padding: 0 80px;
+}
+
+form button {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.return {
+    width: 400px;
+    height: 400px;
+    margin: 7em auto;
 }
 
 
